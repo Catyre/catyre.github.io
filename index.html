@@ -1,1 +1,150 @@
-hello world
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caleb Remocaldo: Home</title>
+
+        <script>
+          MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+              fontCache: 'global'
+            }
+          };
+        </script>          
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <!--Load W3, Bootstrap, and custom CSS-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+     </head>
+
+    <!-- Old bg color: #1c87c9-->
+    <body style="background-color: #a0dff3;">
+      
+    <!--Javascript support for jsMath-->
+    <NOSCRIPT>
+      <DIV STYLE="color:#CC0000; text-align:center">
+        <B>Warning: <A HREF="http://www.math.union.edu/locate/jsMath">jsMath</A>
+        requires JavaScript to process the mathematics on this page.<BR>
+        If your browser supports JavaScript, be sure it is enabled.</B>
+      </DIV>
+      <HR>
+    </NOSCRIPT>
+
+    <!--<body style="background-color: #1c87c9">-->
+        <!--Begin navbar code-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">Navigation</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                  </li>
+                  <!--
+                  <li class="nav-item">
+                    <a class="nav-link" href="/thoughts">Thoughts</a>
+                </li>
+                    -->
+<!--                   <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact me</a>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <!--End navbar code-->
+
+        <!--Begin Container code-->
+        <div class="container-fluid">
+            <div class="row">
+              <!--Begin sidebar code-->
+              <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block bg-dark text-white sidebar collapse position-sticky">
+                <div class="pt-3">
+                  <ul class="nav flex-column">
+                    <div class="circular--portrait">
+                      <img src="/static/img/Me.png">
+                    </div>
+
+                    <big>Caleb Remocaldo</big>
+                    <small>Residence: West Lafayette, IN</small>
+                    <small>Age: 22</small>
+                    <small>Email: calebremo99@yahoo.com</small>
+                    <small>Resumé: Click <a href="/static/caleb_remocaldo_resume.pdf" download="Caleb Remocaldo Resumé">here</a> to download my resumé</small>
+                    <hr width="300px">
+                    <big>Skills</big>
+                    <table width="300px" align="right">
+                      <td>
+                        <small>
+                        
+                        <ul>
+                          <li>Intellectually curious and analytical mindset</li>
+                          <li>Python, IDL, C++, HTML, and CSS experience</li>
+                          <li>Strong understanding of classical and modern physics</li>
+                          <li>Ability to work independently and in team environments</li>
+                          <li>Working knowledge of astronomy conventions</li>
+                          <li>Experience in various laboratory environments</li>
+                          <li>Mining and analyzing large data sets and summarizing findings into key insights</li>
+                          <li>Writing $LaTeX$ documents</li>
+                          <li>Experience in git</li>
+                        </ul>
+                        
+                        </small>
+                      </td>
+                    </table>
+                  </ul>
+                </div>
+              </nav>
+              <!--End sidebar code-->
+              <!--Begin page-specific code-->
+              <div class="col-md-8">
+                
+<h1>About Me</h1>
+
+<center>
+    <table width="200" border="0" align="right" cellpadding="5" cellspacing="0">
+        <tr>
+            <td align="right" valign="top">
+                <img src="/static/img/me_in_straw_hat.png" width="300"><br>
+                Picture of me on an off-roading trip.
+            </td>
+        </tr>
+    </table>
+</center>
+
+<p>
+    My name is Caleb Remocaldo and I'm a senior at Purdue University studying physics with a minor in mathematics.  My primary professional area of interest is in astronomy/astrophysics, although I am also very interested in machine learning, stock market analysis, software engineering, quantum computing, philosophy of science (and philosophy applied to science), and cryptography.  On campus, I am a founding member and officer of the Undergraduate Physics Student Council (UPSC), brother and former vice president at Acacia fraternity, and cellist for the Purdue Philharmonic.
+</p>
+<p>
+    Academically, much of my time at Purdue I have been working under professor John Peterson to develop a software called <a href="https://bitbucket.org/phosim/phosim_release/wiki/Home">PhoSim</a>, short for "Photon Simulator".  PhoSim is a set of fast monte carlo methods used to calculate the physics of both the atmosphere and a specified telescope to produce realistic images of space.  Among many other things, PhoSim can be used to determine concentrations of dark matter in the universe, and is also a useful tool in predictive astronomy.  You can read more about what projects I've done for PhoSim on the <a href="/projects">Projects</a> page.
+</p>
+<p>
+    With both of my parents in the military (my Dad in the Marine Corps, and my Mom in the Air Force), our family moved quite frequently in my childhood.  I have lived in North Carolina, South Carolina, Virginia, Washington D.C., and finally "settled" in Indiana.  Because of our regular moves, I am no stranger to change.  In fact, I think I would quite enjoy moving around the nation (maybe the world?) somewhat regularly in my adulthood, though that is something that I'll address when the time comes, if it ever does.
+</p>
+<p>
+    My hobbies include playing the cello, listening to and exploring different musical genres, reading (mainly science fiction and the philosophy of science), developing scripts and programs for whatever project piques my interest, and spending time with my friends.
+</p>
+<p>
+    One of my hobbies in life is automation.  I live for the process of classifying a given procedure into a set of rules and algorithms that a computer can prcess and output novel results. 
+</p>
+
+              </div>
+              <!--End page-specfic code-->
+            </div>
+        </div>
+        <!--End container code-->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>

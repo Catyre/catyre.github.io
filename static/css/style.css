@@ -1,6 +1,16 @@
-.sidebar {
-    position: fixed;
-    top: 8%;
+
+
+@media (min-width: 1200px) {
+    .sidebar {
+        position: fixed;
+        top: 8%;
+        max-width: 100%
+    }
+
+    /*.container-fluid{
+        max-width: 70%;
+        margin:0px
+   }*/
 }
 
 .nav {

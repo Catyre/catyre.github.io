@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caleb Remocaldo: Projects</title>
+
+        <script>
+          MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+              fontCache: 'global'
+            }
+          };
+        </script>          
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <!--Load W3, Bootstrap, and custom CSS-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+     </head>
+
+    <body style="background-color: #a0dff3;" class="h-100">
+    <!--Javascript support for jsMath-->
+    <NOSCRIPT>
+      <DIV STYLE="color:#CC0000; text-align:center">
+        <B>Warning: <A HREF="http://www.math.union.edu/locate/jsMath">jsMath</A>
+        requires JavaScript to process the mathematics on this page.<BR>
+        If your browser supports JavaScript, be sure it is enabled.</B>
+      </DIV>
+      <HR>
+    </NOSCRIPT>
+
+    <!--<body style="background-color: #1c87c9">-->
+        <!--Begin navbar code-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">Navigation</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                  </li>
+                  <!--<li class="nav-item">
+                    <a class="nav-link" href="/thoughts">Thoughts</a>
+                  </li>-->
+				  <!--<li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact me</a>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <!--End navbar code-->
+
+        <!--Begin Container code-->
+        <div class="container-fluid flex-container">
+            <div class="row">
+              <!--Begin sidebar code-->
+              <nav id="sidebarMenu" class="col-sm-4 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-md-block bg-dark text-white sidebar collapse position-sticky">
+                <div class="pt-3">
+                  <ul class="nav flex-column">
+                    <div class="circular--portrait">
+                      <img src="/static/img/Me.png">
+                    </div>
+                    
+                    <big>Caleb Remocaldo</big>
+                    <small>Residence: West Lafayette, IN</small>
+                    <small>Age: 22</small>
+                    <small>Email: calebremo99@yahoo.com</small>
+                    <hr width="300px">
+                    <big>Skills</big>
+                    <table width="300px" align="right">
+                      <td>
+                        <small>
+                        
+                        <ul>
+                          <li>Intellectually curious and analytical mindset</li>
+                          <li>Python, IDL, C++, Java, HTML, and CSS experience</li>
+                          <li>Strong understanding of classical and modern physics</li>
+                          <li>Ability to work independently and in team environments</li>
+                          <li>Experience in various laboratory environments</li>
+                          <li>Mining and analyzing large data sets and summarizing findings into key insights</li>
+                          <li>Writing $\LaTeX$ documents</li>
+                          <li>Experience in git</li>
+                        </ul>
+                        </small>
+                      </td>
+                    </table>
+                  </ul>
+                </div>
+              </nav>
+              <!--End sidebar code-->
+              <!--Begin page-specific code-->
+              <div class="col-md-8">
+                
+
+<h5 id="telegram">Telegram Bot</h5>
+<p>
+    Telegram is an open-source cloud-based mobile and desktop messaging app, similar to WhatsApp.  Until we used Telegram, my fraternity used SnapChat.  However, SnapChat has a group limit of 32, which at the time was soon to be less than the amount of members we had.  As a solution, we switched our communications to Telegram, which does not have a group limit.  Unlike SnapChat, Telegram does not delete unsaved messages after 24 hours, and so the chat very quickly became cluttered.  To fix this, I made a bot for Telegram that logged each message every user sent to the group, and if it wasn't saved (in the context of Telegram, pinned), the messages would be deleted every 24 hours.
+</p>
+<p>
+    While a relatively simple premise, the implementation was slightly more challenging.  For one, I had to familiarize myself with several Python Telegram APIs, as there were several options and some were better fitted for the task than others.  After becoming familiar with the API, I then had to actually implement a solution to the task at hand.
+</p>
+<p>
+    Source code for the bot can be found on my <a href="https://github.com/Catyre/telegrambot">GitHub</a>.
+</p>
+<p>
+    Skills Applied: Python
+</p>
+<hr>
+
+
+              </div>
+              <!--End page-specfic code-->
+            </div>
+        </div>
+        <!--End container code-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>

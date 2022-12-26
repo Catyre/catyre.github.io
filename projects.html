@@ -23,9 +23,7 @@
         <link href="/static/css/style.css" type="text/css" rel="stylesheet">
      </head>
 
-    <!-- Old bg color: #1c87c9-->
-    <body style="background-color: #a0dff3;">
-      
+    <body style="background-color: #a0dff3;" class="h-100">
     <!--Javascript support for jsMath-->
     <NOSCRIPT>
       <DIV STYLE="color:#CC0000; text-align:center">
@@ -52,12 +50,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/projects">Projects</a>
                   </li>
-                  <!--
-                  <li class="nav-item">
+                  <!--<li class="nav-item">
                     <a class="nav-link" href="/thoughts">Thoughts</a>
-                </li>
-                    -->
-<!--              <li class="nav-item">
+                  </li>-->
+				  <!--<li class="nav-item">
                       <a class="nav-link" href="/contact">Contact me</a>
                   </li> -->
                 </ul>
@@ -67,7 +63,7 @@
         <!--End navbar code-->
 
         <!--Begin Container code-->
-        <div class="container-fluid">
+        <div class="container-fluid flex-container">
             <div class="row">
               <!--Begin sidebar code-->
               <nav id="sidebarMenu" class="col-sm-4 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-md-block bg-dark text-white sidebar collapse position-sticky">
@@ -97,7 +93,6 @@
                           <li>Writing $\LaTeX$ documents</li>
                           <li>Experience in git</li>
                         </ul>
-                        
                         </small>
                       </td>
                     </table>
@@ -110,108 +105,77 @@
                 
 <h2 id="Projects"></h2>
 <h2>Projects</h2>
-<h3>Validating PhoSim</h3>
-<center>
-    <table width="800" border="0" align="right" cellpadding="5" cellspacing="0">
-        <tr>
-            <img src="/static/img/validation_plot.png" width="800" height="350"><br>
-            <td>
-                A plot of the averaged intensity of simulated images (diamonds) to real data (triangles) as a function of time.  The different colors represent what filter was used to simulate the image
-            </td>
-        </tr>
-    </table>
-</center>
-<br><br><br>
 <p>
-    One of my larger projects involved with PhoSim was making a pipeline to validate our simulated data of a specific telescope by making quantitative comparisons to real data of that same telescope.  I did this by first specifying what exactly our simulated telescope was looking at.  This is accomplished by editing "catalog files" that PhoSim reads and interprets into data about what it is looking at.  Since we required a large amount of data, I had to write a Python script that would build these catalog files for me.  After building the files, I would run PhoSim  to simulate the telescope images and collect statistics about each image such as the median of the average pixel value, which is related to the intensity of the image.  These statistics would then be written into a text file to be later read by the plotting program.
+    Listed below are, in no particular order, some of my projects that I have worked/am currently working on.  I have included a semi-brief description of each project, as well as the skills that I applied to each project.  These projects are not necessarily the most impressive or the most complex, but they are the ones that I am most proud of, and the ones that I have learned the most from.  The focus of each project varies widely in both size and topic, from fun games for friends, to serious astrophysics research, to psychological experiments, to software engineering, but they all were valuable learning experiences that I feel noticeably improved my skillset.  I have included links to the code for each project when possible, but some of the projects are proprietary and cannot be shared.
 </p>
 <p>
-    After simulating the images and collecting the statistics into a test file, my pipeline would then repeat an (almost) identical process for our collection of real images, with the obvious exception of not having to simulate them.  After collecting data on both the simulated and real images, the pipeline would then use the programming language IDL to plot the intensity of each image as a function of time.  From these plots, we can draw conclusions about how accurate our simulations are based on how well the simulated data follows the trends of the real data.  The actual intensity values don't matter, so long as the trends are the same.
+    Obviously, as time goes on, I will complete more and more projects, so I will try to keep this list as up to date as possible.  If you have any questions or comments about a project, please feel free to contact me!
 </p>
-<p>
-    In short, this pipeline simulates telescope images given data from a real telescope, then calculates important statistics about both the real and simulated images to draw conclusions about how accurate the simulations are to reality.
-</p>
-<p>
-    A logistical challenge of this project was storage space.  Astronomical images are very often in the tens of gigabyte range of disk space, and I had hundreds to process.  As a result, it was not feasible to have access to every image at once.  As a solution, I simply had the pipeline download the image as it was needed using the Unix command <b>wget</b>, calculate the needed data from the image, then dispose of the image to make space for the next image.
-</p>
-<p>
-    Skills applied: Python, IDL, C++, BASH
-</p>
-<hr>
 
-<h3>Plotting the Mandelbrot Set</h3>
-<table width="300" border="0" align="right" cellpadding="5" cellspacing="0">
-    <tr>
-        <td>
-            <img src="/static/img/mandelbrot_python.png" width="300" height="200"><br>
-            The Mandelbrot set, rendered using a few lines of Python code
-        </td>
-    </tr>
-</table>
-<p>
-    The Mandelbrot set is the set of complex numbers $c$ for which $f_c(z) = z^2 + c$ does not diverge for the sequence $f_c(0), f_c(f_c(0))$, etc.  Despite being governed by a fairly simple equation, the Mandelbrot set is quite the complex fractal (pun intended), host to many many different repeating patterns.  Every now and then, I like to watch zooms of the mandelbrot set (<a href="https://www.youtube.com/watch?v=a3XDry3EwiU">here</a> is an example).  One time while I was watching one, I decided I wanted to actually plot the Mandelbrot set myself using Python.  The process was relatively simple, however the image produced was fairly low quality, not to mention slow given that it was a recursive function called hundreds to thousands of times in Python.  To solve both of these problems at once, I decided to write the code in C++ instead.  Given that it was a simple process for Python, I had assumed it would only be slightly more difficult to write it in C++.
-</p>
-<table width="300" border="0" align="left" cellpadding="5" cellspacing="0">
-    <tr>
-        <td>
-            <img src="/static/img/cmandelbrot_zoom.png" width="300" height="200"><br>
-            The Mandelbrot set, zoomed in, rendered using C++
-        </td>
-    </tr>
-</table>
-<p>
-    To start with, the project required that I use SFML, specifically for its graphics capabilities.  I was not familiar with the library, so familiarizing myself with it presented a challenge.  After that, it was a fairly straightforward (albeit tedious) process of assigning number of iterations to a color value, rendering the image, and allowing zoom/move functionalities to the image.  Where the python version took several minutes to finish rendering the set, the C++ code took mere seconds.  On top of this, it also allowed for zooming into the set.  Unlike the Python code, in the C++ code, the image is redrawn with every zoom, so image quality is a constant.
-</p>
-<p>
-    As with most of these projects, the source code for the C++ version of the Mandelbrot set can be found on my <a href="https://github.com/Catyre/MandelbrotCpp">GitHub</a>.
-</p>
-<p>
-    Skills applied: Python, C++
-</p>
-<hr>
-
-<h3>This website</h3>
-<p>
-    While updating my resumé one day, it dawned on me that a good project to work on to improve my web development skills would be to make an online portfolio of my accomplishments.  Although I had next to no experience in web development, my learning style is more of a "jump off the deep end to learn how to swim" type style, so I was not daunted by the task.  To make the site possible, I learned how to use HTML, CSS (Bootstrap), Flask, and Apache.
-</p>
-<p>
-    Editing the site to reflect my vision of it is an ongoing process, and subject to change.  In the future, I would like to implement a few things.  For example:
-</p>
-<ul>
-    <li>A forum-style text posting area, accessible to only me, where I can write these projects and post them from within the website, rather than editing the raw HTML</li>
-    <li>A tab for blog posts where I write about whatever I please</li>
-    <li>A contact form where users of the site can email me directly and securely</li>
-</ul>
-<p>
-    Skills applied: HTML, CSS, Bootstrap, Python
-</p>
-<hr>
-
-<h3>Python projects</h3>
-<h5>Real Life Among Us</h5>
-
-<table width="350" border="0" align="right" cellpadding="5" cellspacing="0">
-     <tr>
-        <td align="center" valign="top">
-            <img src="/static/img/among_us.png" width="350" height="300"><br>
-            Example output of <b>amongUsTerminal.py</b>.  The command "py" is an alias to "python3".
-        </td>
-    </tr>
-</table>
-
-<p>
-    "Among Us" is a popular mobile game in which there are two teams: crewmates, whose job is to complete menial tasks in the game, and imposters, whose job is to kill the crewmates before they either complete their tasks or successfully identify the imposters.  For this project, I wanted to make a Command Line Interface (CLI) that could make Among Us possible in real life.  To accomplish this, the program inputs a list of players playing the game as well as their email addresses, and associates each player with a set of tasks drawn from a pre-made text file.  After randomizing the tasks and associating them to each player, the players get emailed their player status (whether they are a crewmate or an imposter) and tasks.  
-</p>
-<p>
-    I learned a great deal from this fun project.  When building the terminal version, I learned how to send emails with Python, as well as developing more comfort in dealing with Python classes.  While building the GUI version, I learned a great deal about designing graphical interfaces with Tkinter.
-</p>
-<p>
-    You can find the source for both the terminal and GUI version of the game on my <a href="https://github.com/Catyre/Among-Us">GitHub</a>.  Please note that the GUI version is incomplete as there are some features I have yet to implement (for example, a native text editor to modify the player and task lists within the program).
-</p>
-<p>
-    Skills applied: Python, Tkinter
-</p>
-<hr>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <a href="/projects/phosim">
+            <img src="/static/img/validation_plot.png" width="800" height="350" class="d-block w-100" alt="...">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Validating PhoSim</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <a href="/projects/mandelbrot">
+            <img src="/static/img/cmandelbrot_zoom.png" width="800" height="350" class="d-block w-100" alt="...">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="white">Plotting the Mandelbrot Set</h5>
+          <p class="white">How to visualize one of the most famous complex fractals</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <a href="/projects/djinn">
+            <img src="/static/img/solarsystem.png" width="800" height="350" class="d-block w-100" alt="...">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="white">Making a Physics Engine</h5>
+          <p class="white">Designing a general physics engine from scratch</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <a href="/projects/telegram">
+            <img src="/static/img/telegram.png" width="800" height="350" class="d-block w-100" alt="...">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="white">Telegram Bot</h5>
+          <p class="white">Emulating features of Snapchat in Telegram</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <a href="/projects/website">
+            <img src="/static/img/this_website.png" width="800" height="350" class="d-block w-100" alt="...">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="white">This Website</h5>
+          <p class="white">Read more about the process of making this website!</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 <!--
     See if I can even make a post about this lmao
@@ -223,62 +187,12 @@
 <hr>
 -->
 
-<h5>Quantum Dice Roller</h5>
-<table width="350" border="0" align="right" cellpadding="5" cellspacing="0">
-    <tr>
-       <td align="center" valign="top">
-           <img src="/static/img/quantumThreeDice.png" width="500" height="300"><br>
-           The function <b>random_int</b>, responsible for generating a truly random number by making a quantum measurement.
-       </td>
-   </tr>
-</table>
-<p>
-    A friend and I were rolling three die when we wondered what the average value of the sum of each dice would be as the amount of rolls tended towards infinity.  Of course, we could calculate this using equations, but we felt that it would be more fun to make a program to simulate the dice roll.  The only problem, we quickly realized, was that computers only generate pseudorandom numbers, so we weren't getting as good of an estimate as we could have (it would be a very good estimate, to be clear, but I'm a stickler for precision). To solve this problem and get truly random numbers, we used qiskit, the backend API for IBM's quantum computer, to make a program that made observations on particles in the quantum computer.  These observations collapse the wave function of the particle and force it to be observed in a certain spin state.  This collapse is, according to quantum mechanics, a random event in the universe, with a probability distribution of any given outcome happening.  That state is then associated with either the value 0 or 1.  Using basic number theory, we were able to associate a string of these observations with the roll of a six sided dice.  From there, it's fairly straightforward to find the average value.
-</p>
-<p>
-    While this was a relatively small project (it only took an afternoon to program), I think this is my favorite conceptually.  As a physics major, I am always looking for ways to apply my background in physics to my passion of computer programming.  This project presented a very fun intersection of those two parts of my life.
-</p>
-<p>
-    Skills applied: Python, qiskit
-</p>
-<hr>
-<!--
-<h5>Stock Trading Algorithm</h5>
-<p>
-    For this project, I set out to develop a trading alorithm using the QuantConnect API [INCOMPLETE]
-</p>
-<p>
-    Skills applied: Python, QuantConnect API
-</p>
-<hr>
--->
-
-<h5>Telegram Bot</h5>
-<p>
-    Telegram is an open-source cloud-based mobile and desktop messaging app, similar to WhatsApp.  Until we used Telegram, my fraternity used SnapChat.  However, SnapChat has a group limit of 32, which at the time was soon to be less than the amount of members we had.  As a solution, we switched our communications to Telegram, which does not have a group limit.  Unlike SnapChat, Telegram does not delete unsaved messages after 24 hours, and so the chat very quickly became cluttered.  To fix this, I made a bot for Telegram that logged each message every user sent to the group, and if it wasn't saved (in the context of Telegram, pinned), the messages would be deleted every 24 hours.
-</p>
-<p>
-    While a relatively simple premise, the implementation was slightly more challenging.  For one, I had to familiarize myself with several Python Telegram APIs, as there were several options and some were better fitted for the task than others.  After becoming familiar with the API, I then had to actually implement a solution to the task at hand.
-</p>
-<p>
-    Source code for the bot can be found on my <a href="https://github.com/Catyre/telegrambot">GitHub</a>.
-</p>
-<p>
-    Skills Applied: Python
-</p>
-<hr>
-
-<p>
-    Back to <a href="#Projects">top</a>
-</p>
-
 
               </div>
               <!--End page-specfic code-->
             </div>
         </div>
         <!--End container code-->
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
 </html>

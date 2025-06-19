@@ -2,3 +2,63 @@
 @use "./themes";
 
 // put your custom CSS here!
+
+.callout-title {
+  color: var(--text-normal);
+}
+
+.callout-icon .svg-icon {
+  color: var(--text-normal);
+}
+
+.callout[data-callout="overview"] {
+    --callout-color: 166, 38, 38;
+    --callout-icon: book-check;
+}
+
+
+.callout[data-callout="in-class"] {
+    --callout-color: 166, 38, 38;
+    --callout-icon: school;
+}
+
+
+.callout[data-callout="materials"] {
+    --callout-color: 166, 38, 38;
+    --callout-icon: anvil;
+}
+
+.callout[data-callout="comments"] {
+    --callout-color: 166, 38, 38;
+    --callout-icon: message-circle;
+}
+
+.callout[data-callout="log"] {
+    --callout-color: 86, 47, 98;
+    --callout-icon: radio-tower;
+}
+
+.callout[data-callout="discovery"] {
+    --callout-color: 86, 47, 98;
+    --callout-icon: telescope;
+}
+
+.callout[data-callout="tech"] {
+    --callout-color:86, 47, 98;
+    --callout-icon: cpu
+}
+
+.callout[data-callout="systems"] {
+    --callout-color:86, 47, 98;
+    --callout-icon: orbit
+}
+
+.callout[data-callout="events"] {
+    --callout-color:86, 47, 98;
+    --callout-icon: newspaper
+}
+
+.callout[data-callout="visual-doc"] {
+    --callout-color:86, 47, 98;
+    --callout-icon: scan-eye
+}

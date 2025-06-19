@@ -1,0 +1,13 @@
+## To do
+- Upgrade interceptors to S class
+- more orgnanic frigates
+- farm nanites
+- farm freighter technology 
+- explore eissentam more
+- learn glitch building
+- locate bone worm in calhub
+- research most profitable crop
+- locate sky island planet for sky village
+- farming compound on caladan
+- explorer barracks
+- recruit exploration trade and industrial frigates
